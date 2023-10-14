@@ -10,7 +10,7 @@ def create_app():
 
     # Instantiate Application
     app = Flask(__name__)
-    load_model = load('finalized_model.sav')
+    load_model = load("application/finalized_model.sav")
 
     # as easy as changing path to /form and make a link to it in main page
     @app.route('/')

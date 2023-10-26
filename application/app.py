@@ -5,18 +5,13 @@ from joblib import load
 
 from .predict import get_prediction
 
-# Instantiate Application
-
 
 def create_app():
-    """
-    Function to deploy heroku application.
-    Contains assorment of functions which control the inputs and outputs
-    of interractive web application.
-    """
+
+    # Instantiate Application
     app = Flask(__name__)
-    load_model = load('finalized_model.sav')
-    
+    load_model = load("application/finalized_model.sav")
+
     # as easy as changing path to /form and make a link to it in main page
     @app.route('/')
     def form():
@@ -44,9 +39,9 @@ def create_app():
             amenities = request.form.getlist('feature_checkbox')
             # basics =
             to_predict = [property_type, room_type, bathrooms,
-                          cancellation_policy, city, host_since,
-                          review_scores_rating, bedrooms, beds,
-                          amenities]
+                            cancellation_policy, city, host_since,
+                            review_scores_rating, bedrooms, beds,
+                            amenities]
 
             message = model_output(to_predict)
         return message

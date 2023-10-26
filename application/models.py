@@ -1,21 +1,19 @@
 # File to run model
 
 # IMPORT STATEMENTS
-from datetime import datetime
-import pandas as pd
-import numpy as np
-import requests
 import datetime
 from datetime import datetime
-import joblib
 
+import joblib
+import numpy as np
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import RandomForestRegressor
 # IMPORTS FOR MODEL
 from sklearn.metrics import mean_absolute_error
-from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 # IMPORT FILES
 train = pd.read_csv("data/train.csv", index_col='id')

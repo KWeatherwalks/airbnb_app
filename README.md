@@ -4,7 +4,7 @@ Application to predict Airbnb prices.\
 Home page allows users to input multiple features of their Airbnb listing.\
 Result page returns a recommended price based on user selection.
 
-**App:** http://rightpriceairbnb.herokuapp.com/
+**App:** https://rightpriceairbnb.azurewebsites.net/
 <br><br>
 
 ### Home
